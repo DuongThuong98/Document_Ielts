@@ -6,7 +6,7 @@ if (typeof(BackColor)=="undefined")
 if (typeof(ForeColor)=="undefined")
 	ForeColor= "black";
 if (typeof(DisplayFormat)=="undefined")
-	DisplayFormat = "<div class='day box-time-date'><span class='time-num time-day'>%%D%%</span>Days</div><div class='hour box-time-date'><span class='time-num'>%%H%%</span>Hrs</div><div class='min box-time-date'><span class='time-num'>%%M%%</span>Mins</div><div class='sec box-time-date'><span class='time-num'>%%S%%</span>Secs</div>";
+	DisplayFormat = "<div class='hour box-time-date'><span class='time-num'>%%H%%</span>Hrs</div><div class='min box-time-date'><span class='time-num'>%%M%%</span>Mins</div><div class='sec box-time-date'><span class='time-num'>%%S%%</span>Secs</div>";
 if (typeof(CountActive)=="undefined")
 	CountActive = true;
 if (typeof(FinishMessage)=="undefined")
@@ -33,8 +33,9 @@ function CountBack_slider(secs,iid,j_timer) {
 		document.getElementById('heading'+j_timer).style.display = "none";
 		return;
 	}
-	DisplayStr = DisplayFormat.replace(/%%D%%/g, calcage(secs,86400,100000));
-	DisplayStr = DisplayStr.replace(/%%H%%/g, calcage(secs,3600,24));
+	// DisplayStr = DisplayFormat.replace(/%%D%%/g, calcage(secs,86400,100000));
+
+	DisplayStr = DisplayFormat.replace(/%%H%%/g, calcage(secs,3600,24));
 	DisplayStr = DisplayStr.replace(/%%M%%/g, calcage(secs,60,60));
 	DisplayStr = DisplayStr.replace(/%%S%%/g, calcage(secs,1,60));
 	
@@ -59,8 +60,8 @@ function CountBack(secs,iid,j) {
 		document.getElementById('heading'+j).style.display = "none";
 		return;
 	}
-	DisplayStr = DisplayFormat.replace(/%%D%%/g, calcage(secs,86400,100000));
-	DisplayStr = DisplayStr.replace(/%%H%%/g, calcage(secs,3600,24));
+	// DisplayStr = DisplayFormat.replace(/%%D%%/g, calcage(secs,86400,100000));
+	DisplayStr = DisplayFormat.replace(/%%H%%/g, calcage(secs,3600,24));
 	DisplayStr = DisplayStr.replace(/%%M%%/g, calcage(secs,60,60));
 	DisplayStr = DisplayStr.replace(/%%S%%/g, calcage(secs,1,60));
 	document.getElementById(iid).innerHTML = DisplayStr;

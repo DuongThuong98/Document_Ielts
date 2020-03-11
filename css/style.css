@@ -1485,6 +1485,7 @@ ul#cart-sidebar {
 	min-height: 55px;
 	text-align: center;
 	margin-top: 6px;
+	margin-bottom: 6px;
 	font-weight: 700;
 	text-transform: uppercase;
 	border-radius: 0;
@@ -1859,7 +1860,7 @@ ul#cart-sidebar {
 .pr-button {
 	border: 0 none;
 	left: 50%;
-	margin-left: -66px;
+	margin-left: -26px;
 	position: absolute;
 	top: 30%;
 	padding-left: 2px;

@@ -1126,21 +1126,22 @@
 
                                         <div id="productTabContent" class="tab-content">
                                             <div class="tab-pane fade in active" id="description">
-                                                <div class="std">
+                                                <div class="std" style="margin-left: 30px;">
                                                    
 
                                                     <div id="tab-a6bfee399f4791567a15c5309524f5ac"
                                                         class="tab-content current">
                                                          <!-- thời gian còn lại/ -->
                                                     <div class="upload-date" style="display: grid;">
-                                                        <span style="float: left;">CÒN: </span>
+                                                        <span style="float: left;">THỜI GIAN CÒN LẠI: </span>
                                                         <div class="countbox_1 jtv-timer-grid count_2" value="count_2" timerun="01/03/2020 12:00:00 AM" style="  display: flex;
                                                             flex-direction: row;
                                                             justify-content: space-around;
                                                             margin-bottom: 10px;
-                                                            width: 400px; 
-                                                            float: left;">
-                                                          <div class="day box-time-date"><span class="time-num time-day">00</span>Days</div>
+                                                            width: 200px; 
+                                                            float: left;
+                                                            background-color: pink;">
+                                                          
                                                           <div class="hour box-time-date"><span class="time-num">00</span>Hrs</div>
                                                           <div class="min box-time-date"><span class="time-num">00</span>Mins</div>
                                                           <div class="sec box-time-date"><span class="time-num">00</span>Secs</div>
@@ -1152,7 +1153,7 @@
                                                         <!--End-->
 
                                                         
-                                                        <ul class="questions col-md-12 col-sm-12 col-xs-12">
+                                                        <ul class="questions col-md-12 col-sm-12 col-xs-12" >
                                                             <h3><span>Questions</span></h3>
 
                                                             <div class="sectionsub scroll_sectionsub"
@@ -2042,44 +2043,6 @@
     </script>
 
 
-    <script type="text/javascript">
-
-        jQuery(document).ready(function () {
-            $('.password-group').hide();
-            $('.my-sub-comment-group').hide();
-            // console.log('a');
-        });
-        jQuery(document).ready(function () {
-
-            $('.respone').click(function () {
-
-                $('.my-sub-comment-group').toggle(500);
-                //append("<li class='my-sub-comment'><div class='avartar'> <img src='images/avatar.png' alt='Avatar'></div><div class='comment-body'><div class='my-comment-form'>  <textarea name='message' id='message' rows='8' class='form-control'></textarea>    <button class='button'> <span>Post Comment</span></button><button class='button cancel'><span>Hủy</span></button>  </div> </div> </li>")
-                // alert("fdf");
-            })
-
-            $('.comment-count').click(function () {
-                $('.my-sub-comment-group').toggle(500);
-            })
-
-            $('.btn-primary').click(function() {
-               // strin = $('.sectionsub').attr('style');
-               // alert(strin);
-                if($('.sectionsub').attr('style') == "font-size: 14px; display: block;")
-                {
-                     //alert("dfsdf");
-                    $('.sectionsub').css({"display": "none"});
-                    $('.hidden-answer').css({"display": "none"});
-                }
-                else
-                {
-                $('.sectionsub').css({"display": "block"});
-                $('.hidden-answer').css({"display": "inline"});
-                }
-            })
-
-        });
-    </script>
 
     <!-- jquery.mobile-menu js -->
     <script src="js/mobile-menu.js"></script>
@@ -2091,12 +2054,65 @@
     <script src="js/main.js"></script>
 
     <!-- countdown js -->
-    <script src="js/countdown.js"></script>
+    <!-- <script src="js/countdown.js"></script> -->
 
     <!--cloud-zoom js -->
     <script src="js/cloud-zoom.js"></script>
 
-
+    <script>
+        var dthen1 = new Date("12/25/20 11:59:00 PM");
+        start = "12/25/20 07:00:00 PM";
+        start_date = Date.parse(start);
+        var dnow1 = new Date(start_date);
+        if (CountStepper > 0)
+          ddiff = new Date((dnow1) - (dthen1));
+        else
+          ddiff = new Date((dthen1) - (dnow1));
+        gsecs1 = Math.floor(ddiff.valueOf() / 1000);
+    
+        var iid1 = "countbox_1";
+        CountBack_slider(gsecs1, "countbox_1", 1);
+      </script>
+    
+    
+        <script type="text/javascript">
+    
+            jQuery(document).ready(function () {
+                $('.password-group').hide();
+                $('.my-sub-comment-group').hide();
+                // console.log('a');
+            });
+            jQuery(document).ready(function () {
+    
+                $('.respone').click(function () {
+    
+                    $('.my-sub-comment-group').toggle(500);
+                    //append("<li class='my-sub-comment'><div class='avartar'> <img src='images/avatar.png' alt='Avatar'></div><div class='comment-body'><div class='my-comment-form'>  <textarea name='message' id='message' rows='8' class='form-control'></textarea>    <button class='button'> <span>Post Comment</span></button><button class='button cancel'><span>Hủy</span></button>  </div> </div> </li>")
+                    // alert("fdf");
+                })
+    
+                $('.comment-count').click(function () {
+                    $('.my-sub-comment-group').toggle(500);
+                })
+    
+                $('.btn-primary').click(function() {
+                   // strin = $('.sectionsub').attr('style');
+                   // alert(strin);
+                    if($('.sectionsub').attr('style') == "font-size: 14px; display: block;")
+                    {
+                         //alert("dfsdf");
+                        $('.sectionsub').css({"display": "none"});
+                        $('.hidden-answer').css({"display": "none"});
+                    }
+                    else
+                    {
+                    $('.sectionsub').css({"display": "block"});
+                    $('.hidden-answer').css({"display": "inline"});
+                    }
+                })
+    
+            });
+        </script>
 </body>
 
 <!-- Mirrored from htmlmystore.justthemevalley.com/single_product.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Mar 2020 08:37:42 GMT -->
